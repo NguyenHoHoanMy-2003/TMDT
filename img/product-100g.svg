@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 350">
+  <rect width="300" height="350" fill="#fff7ef"/>
+  
+  <!-- Package -->
+  <rect x="75" y="50" width="150" height="220" rx="10" fill="#E9B949" opacity="0.9"/>
+  <rect x="85" y="60" width="130" height="200" rx="8" fill="#ffffff" opacity="0.4"/>
+  
+  <!-- Label area -->
+  <rect x="100" y="80" width="100" height="60" rx="5" fill="#8B5E3C" opacity="0.2"/>
+  
+  <!-- Turmeric root icon -->
+  <g transform="translate(150, 170)">
+    <ellipse cx="0" cy="0" rx="35" ry="25" fill="#8B5E3C" opacity="0.6"/>
+    <ellipse cx="-15" cy="5" rx="20" ry="15" fill="#8B5E3C" opacity="0.5"/>
+    <ellipse cx="18" cy="3" rx="22" ry="16" fill="#8B5E3C" opacity="0.55"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="150" y="230" font-family="Arial" font-size="18" fill="#8B5E3C" text-anchor="middle" font-weight="bold">
+    100g
+  </text>
+  
+  <!-- Quality seal -->
+  <circle cx="200" cy="100" r="20" fill="#A4C639" opacity="0.4"/>
+  <text x="200" y="105" font-family="Arial" font-size="10" fill="#8B5E3C" text-anchor="middle" font-weight="bold">✓</text>
+  
+  <!-- Base shadow -->
+  <ellipse cx="150" cy="285" rx="60" ry="10" fill="#8B5E3C" opacity="0.1"/>
+  
+  <text x="150" y="330" font-family="Arial" font-size="12" fill="#8B5E3C" text-anchor="middle">
+    Tinh bột nghệ 100g
+  </text>
+</svg>

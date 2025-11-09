@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#fff7ef"/>
+  
+  <!-- Field panorama -->
+  <rect x="0" y="200" width="800" height="300" fill="#A4C639" opacity="0.3"/>
+  
+  <!-- Mountains background -->
+  <path d="M0,250 L150,180 L300,220 L450,160 L600,200 L750,170 L800,220 L800,500 L0,500 Z" fill="#8B5E3C" opacity="0.15"/>
+  
+  <!-- Field rows in perspective -->
+  <g opacity="0.5">
+    <path d="M100,300 L700,300 L650,320 L150,320 Z" fill="#8B5E3C"/>
+    <path d="M120,340 L680,340 L640,360 L160,360 Z" fill="#8B5E3C"/>
+    <path d="M140,380 L660,380 L630,400 L170,400 Z" fill="#8B5E3C"/>
+    <path d="M160,420 L640,420 L620,440 L180,440 Z" fill="#8B5E3C"/>
+  </g>
+  
+  <!-- Turmeric roots illustration -->
+  <g transform="translate(250, 80)">
+    <ellipse cx="0" cy="0" rx="80" ry="60" fill="#E9B949"/>
+    <ellipse cx="-40" cy="15" rx="50" ry="40" fill="#E9B949" opacity="0.9"/>
+    <ellipse cx="50" cy="10" rx="55" ry="45" fill="#E9B949" opacity="0.85"/>
+    <ellipse cx="10" cy="50" rx="40" ry="30" fill="#E9B949" opacity="0.8"/>
+  </g>
+  
+  <g transform="translate(500, 100)">
+    <ellipse cx="0" cy="0" rx="70" ry="55" fill="#E9B949"/>
+    <ellipse cx="-35" cy="12" rx="45" ry="35" fill="#E9B949" opacity="0.9"/>
+    <ellipse cx="45" cy="8" rx="50" ry="40" fill="#E9B949" opacity="0.85"/>
+  </g>
+  
+  <!-- Sun -->
+  <circle cx="700" cy="80" r="50" fill="#E9B949" opacity="0.3"/>
+  
+  <text x="400" y="480" font-family="Arial" font-size="16" fill="#8B5E3C" text-anchor="middle">
+    Hành trình từ ruộng nghệ đến sản phẩm
+  </text>
+</svg>
