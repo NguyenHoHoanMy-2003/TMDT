@@ -1,213 +1,303 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tinh bột nghệ Quảng Nam — Tinh túy đất Quảng</title>
-  <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">
-        <img src="../img/logo.svg" alt="Logo Nghệ Quảng Nam">
-        <span>Nghệ Quảng Nam</span>
-      </a>
-      <nav class="main-nav">
-        <a href="index.html">Trang chủ</a>
-        <a href="story.html">Câu chuyện</a>
-        <a href="founder.html">Người sáng lập</a>
-        <a href="#products">Sản phẩm</a>
-        <a href="order.html">Đặt hàng</a>
-      </nav>
-      <button id="cart-btn" class="cart-btn" aria-label="Mở giỏ hàng">
-        <span class="cart-icon">🛒</span>
-        <span id="cart-count">0</span>
-      </button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tinh bột nghệ Quảng Nam — Tinh túy đất Quảng</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">
+          <img src="../img/logo.svg" alt="Logo Nghệ Quảng Nam" />
+          <span>Nghệ Quảng Nam</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <a href="index.html">Trang chủ</a>
+          <a href="story.html">Câu chuyện</a>
+          <a href="founder.html">Người sáng lập</a>
+          <a href="#products">Sản phẩm</a>
+          <a href="order.html">Đặt hàng</a>
+        </nav>
+        <button id="cart-btn" class="cart-btn" aria-label="Mở giỏ hàng">
+          <span class="cart-icon">🛒</span>
+          <span id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-main">
+        <div class="hero-content">
+          <img
+            src="../img/hero-turmeric.svg"
+            alt="Tinh bột nghệ Quảng Nam"
+            class="hero-image"
+            loading="eager"
+          />
+          <div class="hero-overlay">
+            <h1>Tinh bột nghệ Quảng Nam</h1>
+            <p class="hero-tagline">
+              Tinh túy đất Quảng — Thuần khiết từ thiên nhiên
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Giá trị độc đáo Section -->
+      <section id="values" class="values-section">
+        <div class="container">
+          <h2 class="section-title">Giá trị độc đáo của chúng tôi</h2>
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">🌱</div>
+              <h3>100% Tự nhiên</h3>
+              <p>
+                Không phẩm màu, không chất bảo quản. Nghệ được trồng theo phương
+                pháp hữu cơ trên vùng đất màu mỡ Quảng Nam.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">❄️</div>
+              <h3>Công nghệ sấy lạnh</h3>
+              <p>
+                Giữ trọn hàm lượng curcumin và tinh chất quý giá. Quy trình hiện
+                đại kết hợp truyền thống.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">✅</div>
+              <h3>Kiểm định chất lượng</h3>
+              <p>
+                Đạt tiêu chuẩn ATTP, được kiểm nghiệm nghiêm ngặt từ nguồn gốc
+                đến thành phẩm.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">🤝</div>
+              <h3>Hỗ trợ nông dân</h3>
+              <p>
+                Mua trực tiếp từ người trồng nghệ, đảm bảo thu nhập công bằng và
+                bền vững cho cộng đồng.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Câu chuyện Summary -->
+      <section id="story-summary" class="story-summary">
+        <div class="container">
+          <div class="two-col-layout">
+            <div class="content-col">
+              <h2>Câu chuyện từ đất Quảng</h2>
+              <p>
+                Tinh bột nghệ Quảng Nam ra đời từ tình yêu với quê hương và mong
+                muốn mang đến sản phẩm thiên nhiên tinh túy nhất cho mọi gia
+                đình Việt.
+              </p>
+              <p>
+                Từ những cánh đồng nghệ xanh mướt tại Quảng Nam, chúng tôi đã
+                xây dựng quy trình sản xuất khép kín, từ gieo trồng, chăm sóc
+                đến thu hoạch và chế biến. Mỗi sản phẩm đều mang trong mình câu
+                chuyện của người nông dân, sự tận tâm của đội ngũ, và trách
+                nhiệm với sức khỏe cộng đồng.
+              </p>
+              <a href="story.html" class="btn primary"
+                >Đọc câu chuyện đầy đủ →</a
+              >
+            </div>
+            <div class="image-col">
+              <img
+                src="../img/story-field.svg"
+                alt="Cánh đồng nghệ Quảng Nam"
+                class="feature-img"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Người sáng lập Summary -->
+      <section id="founder-summary" class="founder-summary">
+        <div class="container">
+          <div class="two-col-layout reverse">
+            <div class="image-col">
+              <img
+                src="../img/founder.svg"
+                alt="Người sáng lập"
+                class="feature-img circle"
+                loading="lazy"
+              />
+            </div>
+            <div class="content-col">
+              <h2>Người sáng lập</h2>
+              <p class="founder-name">Ông Nguyễn Văn Minh</p>
+              <p>
+                Sinh ra và lớn lên tại Quảng Nam, ông Nguyễn Văn Minh có gần 30
+                năm gắn bó với nghề trồng và chế biến nghệ. Với tâm huyết và
+                kinh nghiệm dày dặn, ông đã xây dựng mô hình sản xuất tinh bột
+                nghệ chất lượng cao, đưa sản phẩm Quảng Nam vươn xa khắp cả
+                nước.
+              </p>
+              <p>
+                "Tôi mong muốn mỗi gia đình Việt đều có thể tiếp cận với tinh
+                bột nghệ tinh khiết, không lo về nguồn gốc hay chất lượng. Đó là
+                sứ mệnh của chúng tôi." — Ông Nguyễn Văn Minh
+              </p>
+              <a href="founder.html" class="btn outline">Tìm hiểu thêm →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sản phẩm Section -->
+      <section id="products" class="products container">
+        <h2 class="section-title">Sản phẩm của chúng tôi</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="../img/product-100g.svg" alt="Tinh bột nghệ 100g" loading="lazy" />
+            <h3>Tinh bột nghệ 100g</h3>
+            <p class="price">₫120.000</p>
+            <p class="excerpt">
+              Gói nhỏ tiện lợi, phù hợp cho cá nhân hoặc thử nghiệm.
+            </p>
+            <div class="card-actions">
+              <a class="btn" href="product-100g.html">Chi tiết</a>
+              <button
+                class="btn primary add-to-cart"
+                data-id="tb100"
+                data-name="Tinh bột nghệ 100g"
+                data-price="120000"
+              >
+                Thêm giỏ
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="../img/product-250g.svg" alt="Tinh bột nghệ 250g" loading="lazy" />
+            <h3>Tinh bột nghệ 250g</h3>
+            <p class="price">₫280.000</p>
+            <p class="excerpt">Gói gia đình, tiết kiệm hơn. Sử dụng lâu dài.</p>
+            <div class="card-actions">
+              <a class="btn" href="product-250g.html">Chi tiết</a>
+              <button
+                class="btn primary add-to-cart"
+                data-id="tb250"
+                data-name="Tinh bột nghệ 250g"
+                data-price="280000"
+              >
+                Thêm giỏ
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA đặt hàng -->
+      <section class="cta-order">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Sẵn sàng trải nghiệm tinh bột nghệ Quảng Nam?</h2>
+            <p>
+              Đặt hàng ngay hôm nay và nhận ưu đãi đặc biệt cho khách hàng mới!
+            </p>
+            <a href="order.html" class="btn btn-large primary">Đặt hàng ngay</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Thông điệp -->
+      <section class="message-section">
+        <div class="container">
+          <h2 class="section-title">Cam kết của chúng tôi</h2>
+          <div class="message-grid">
+            <div class="message-card">
+              <h3>📞 Hỗ trợ tận tâm</h3>
+              <p>
+                Đội ngũ tư vấn sẵn sàng hỗ trợ bạn 24/7 qua hotline
+                <strong>0123.456.789</strong>
+              </p>
+            </div>
+            <div class="message-card">
+              <h3>🚚 Giao hàng toàn quốc</h3>
+              <p>
+                Miễn phí vận chuyển cho đơn hàng từ 500.000đ. Giao hàng nhanh
+                chóng, an toàn.
+              </p>
+            </div>
+            <div class="message-card">
+              <h3>💳 Thanh toán linh hoạt</h3>
+              <p>
+                COD, chuyển khoản, ví điện tử. Đa dạng phương thức thanh toán
+                tiện lợi.
+              </p>
+            </div>
+            <div class="message-card">
+              <h3>✨ Chính hãng 100%</h3>
+              <p>
+                Cam kết sản phẩm chính gốc từ nhà sản xuất. Hoàn tiền nếu phát
+                hiện hàng giả.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <h4>Công ty Tinh bột nghệ Quảng Nam</h4>
+          <p>Địa chỉ: Quảng Nam, Việt Nam</p>
+          <p>Hotline: <a href="tel:0123456789">0123.456.789</a></p>
+          <p>Email: info@nghe-quangnam.vn</p>
+        </div>
+        <div class="footer-col">
+          <h4>Liên kết</h4>
+          <ul>
+            <li><a href="story.html">Câu chuyện</a></li>
+            <li><a href="founder.html">Người sáng lập</a></li>
+            <li><a href="order.html">Đặt hàng</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kết nối</h4>
+          <p>Facebook | Zalo | Instagram</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year"></span> Nghệ Quảng Nam — Tinh túy đất Quảng
+        </p>
+      </div>
+    </footer>
+
+    <!-- Cart modal -->
+    <div id="cart-modal" class="cart-modal" aria-hidden="true">
+      <div class="cart-panel">
+        <button id="close-cart" class="close-cart" aria-label="Đóng giỏ hàng">
+          ×
+        </button>
+        <h3>Giỏ hàng của bạn</h3>
+        <div id="cart-items"></div>
+        <div class="cart-summary">Tổng: <span id="cart-total">₫0</span></div>
+        <div class="cart-actions">
+          <button id="checkout" class="btn primary">Thanh toán</button>
+          <button id="empty-cart" class="btn">Xóa hết</button>
+        </div>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-main">
-      <div class="hero-content">
-        <img src="../img/hero-turmeric.svg" alt="Tinh bột nghệ Quảng Nam" class="hero-image">
-        <div class="hero-overlay">
-          <h1>Tinh bột nghệ Quảng Nam</h1>
-          <p class="hero-tagline">Tinh túy đất Quảng — Thuần khiết từ thiên nhiên</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Giá trị độc đáo Section -->
-    <section id="values" class="values-section">
-      <div class="container">
-        <h2 class="section-title">Giá trị độc đáo của chúng tôi</h2>
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon">🌱</div>
-            <h3>100% Tự nhiên</h3>
-            <p>Không phẩm màu, không chất bảo quản. Nghệ được trồng theo phương pháp hữu cơ trên vùng đất màu mỡ Quảng Nam.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">❄️</div>
-            <h3>Công nghệ sấy lạnh</h3>
-            <p>Giữ trọn hàm lượng curcumin và tinh chất quý giá. Quy trình hiện đại kết hợp truyền thống.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">✅</div>
-            <h3>Kiểm định chất lượng</h3>
-            <p>Đạt tiêu chuẩn ATTP, được kiểm nghiệm nghiêm ngặt từ nguồn gốc đến thành phẩm.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">🤝</div>
-            <h3>Hỗ trợ nông dân</h3>
-            <p>Mua trực tiếp từ người trồng nghệ, đảm bảo thu nhập công bằng và bền vững cho cộng đồng.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Câu chuyện Summary -->
-    <section id="story-summary" class="story-summary">
-      <div class="container">
-        <div class="two-col-layout">
-          <div class="content-col">
-            <h2>Câu chuyện từ đất Quảng</h2>
-            <p>Tinh bột nghệ Quảng Nam ra đời từ tình yêu với quê hương và mong muốn mang đến sản phẩm thiên nhiên tinh túy nhất cho mọi gia đình Việt.</p>
-            <p>Từ những cánh đồng nghệ xanh mướt tại Quảng Nam, chúng tôi đã xây dựng quy trình sản xuất khép kín, từ gieo trồng, chăm sóc đến thu hoạch và chế biến. Mỗi sản phẩm đều mang trong mình câu chuyện của người nông dân, sự tận tâm của đội ngũ, và trách nhiệm với sức khỏe cộng đồng.</p>
-            <a href="story.html" class="btn primary">Đọc câu chuyện đầy đủ →</a>
-          </div>
-          <div class="image-col">
-            <img src="../img/story-field.svg" alt="Cánh đồng nghệ Quảng Nam" class="feature-img">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Người sáng lập Summary -->
-    <section id="founder-summary" class="founder-summary">
-      <div class="container">
-        <div class="two-col-layout reverse">
-          <div class="image-col">
-            <img src="../img/founder.svg" alt="Người sáng lập" class="feature-img circle">
-          </div>
-          <div class="content-col">
-            <h2>Người sáng lập</h2>
-            <p class="founder-name">Ông Nguyễn Văn Minh</p>
-            <p>Sinh ra và lớn lên tại Quảng Nam, ông Nguyễn Văn Minh có gần 30 năm gắn bó với nghề trồng và chế biến nghệ. Với tâm huyết và kinh nghiệm dày dặn, ông đã xây dựng mô hình sản xuất tinh bột nghệ chất lượng cao, đưa sản phẩm Quảng Nam vươn xa khắp cả nước.</p>
-            <p>"Tôi mong muốn mỗi gia đình Việt đều có thể tiếp cận với tinh bột nghệ tinh khiết, không lo về nguồn gốc hay chất lượng. Đó là sứ mệnh của chúng tôi." — Ông Nguyễn Văn Minh</p>
-            <a href="founder.html" class="btn outline">Tìm hiểu thêm →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sản phẩm Section -->
-    <section id="products" class="products container">
-      <h2 class="section-title">Sản phẩm của chúng tôi</h2>
-      <div class="product-grid">
-        <article class="product-card">
-          <img src="../img/product-100g.svg" alt="Tinh bột nghệ 100g">
-          <h3>Tinh bột nghệ 100g</h3>
-          <p class="price">₫120.000</p>
-          <p class="excerpt">Gói nhỏ tiện lợi, phù hợp cho cá nhân hoặc thử nghiệm.</p>
-          <div class="card-actions">
-            <a class="btn" href="product-100g.html">Chi tiết</a>
-            <button class="btn primary add-to-cart" data-id="tb100" data-name="Tinh bột nghệ 100g" data-price="120000">Thêm giỏ</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="../img/product-250g.svg" alt="Tinh bột nghệ 250g">
-          <h3>Tinh bột nghệ 250g</h3>
-          <p class="price">₫280.000</p>
-          <p class="excerpt">Gói gia đình, tiết kiệm hơn. Sử dụng lâu dài.</p>
-          <div class="card-actions">
-            <a class="btn" href="product-250g.html">Chi tiết</a>
-            <button class="btn primary add-to-cart" data-id="tb250" data-name="Tinh bột nghệ 250g" data-price="280000">Thêm giỏ</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CTA đặt hàng -->
-    <section class="cta-order">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Sẵn sàng trải nghiệm tinh bột nghệ Quảng Nam?</h2>
-          <p>Đặt hàng ngay hôm nay và nhận ưu đãi đặc biệt cho khách hàng mới!</p>
-          <a href="order.html" class="btn btn-large primary">Đặt hàng ngay</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Thông điệp -->
-    <section class="message-section">
-      <div class="container">
-        <h2 class="section-title">Cam kết của chúng tôi</h2>
-        <div class="message-grid">
-          <div class="message-card">
-            <h3>📞 Hỗ trợ tận tâm</h3>
-            <p>Đội ngũ tư vấn sẵn sàng hỗ trợ bạn 24/7 qua hotline <strong>0123.456.789</strong></p>
-          </div>
-          <div class="message-card">
-            <h3>🚚 Giao hàng toàn quốc</h3>
-            <p>Miễn phí vận chuyển cho đơn hàng từ 500.000đ. Giao hàng nhanh chóng, an toàn.</p>
-          </div>
-          <div class="message-card">
-            <h3>💳 Thanh toán linh hoạt</h3>
-            <p>COD, chuyển khoản, ví điện tử. Đa dạng phương thức thanh toán tiện lợi.</p>
-          </div>
-          <div class="message-card">
-            <h3>✨ Chính hãng 100%</h3>
-            <p>Cam kết sản phẩm chính gốc từ nhà sản xuất. Hoàn tiền nếu phát hiện hàng giả.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-col">
-        <h4>Công ty Tinh bột nghệ Quảng Nam</h4>
-        <p>Địa chỉ: Quảng Nam, Việt Nam</p>
-        <p>Hotline: <a href="tel:0123456789">0123.456.789</a></p>
-        <p>Email: info@nghe-quangnam.vn</p>
-      </div>
-      <div class="footer-col">
-        <h4>Liên kết</h4>
-        <ul>
-          <li><a href="story.html">Câu chuyện</a></li>
-          <li><a href="founder.html">Người sáng lập</a></li>
-          <li><a href="order.html">Đặt hàng</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Kết nối</h4>
-        <p>Facebook | Zalo | Instagram</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> Nghệ Quảng Nam — Tinh túy đất Quảng</p>
-    </div>
-  </footer>
-
-  <!-- Cart modal -->
-  <div id="cart-modal" class="cart-modal" aria-hidden="true">
-    <div class="cart-panel">
-      <button id="close-cart" class="close-cart" aria-label="Đóng giỏ hàng">×</button>
-      <h3>Giỏ hàng của bạn</h3>
-      <div id="cart-items"></div>
-      <div class="cart-summary">Tổng: <span id="cart-total">₫0</span></div>
-      <div class="cart-actions">
-        <button id="checkout" class="btn primary">Thanh toán</button>
-        <button id="empty-cart" class="btn">Xóa hết</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="js/main.js"></script>
-</body>
+    <script src="../.js/main.js"></script>
+  </body>
 </html>

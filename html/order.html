@@ -1,223 +1,290 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Đặt hàng — Nghệ Quảng Nam</title>
-  <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">
-        <img src="../img/logo.svg" alt="Logo">
-        <span>Nghệ Quảng Nam</span>
-      </a>
-      <nav class="main-nav">
-        <a href="index.html">Trang chủ</a>
-        <a href="story.html">Câu chuyện</a>
-        <a href="founder.html">Người sáng lập</a>
-        <a href="index.html#products">Sản phẩm</a>
-        <a href="order.html" class="active">Đặt hàng</a>
-      </nav>
-      <button id="cart-btn-2" class="cart-btn">
-        <span class="cart-icon">🛒</span>
-        <span id="cart-count-2">0</span>
-      </button>
-    </div>
-  </header>
-
-  <main class="container page-content">
-    <header class="page-header">
-      <h1>Đặt hàng</h1>
-      <p class="lead">Điền thông tin để nhận sản phẩm tinh bột nghệ Quảng Nam chính gốc</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Đặt hàng — Nghệ Quảng Nam</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">
+          <img src="../img/logo.svg" alt="Logo" />
+          <span>Nghệ Quảng Nam</span>
+        </a>
+        <nav class="main-nav">
+          <a href="index.html">Trang chủ</a>
+          <a href="story.html">Câu chuyện</a>
+          <a href="founder.html">Người sáng lập</a>
+          <a href="index.html#products">Sản phẩm</a>
+          <a href="order.html" class="active">Đặt hàng</a>
+        </nav>
+        <button id="cart-btn-2" class="cart-btn">
+          <span class="cart-icon">🛒</span>
+          <span id="cart-count-2">0</span>
+        </button>
+      </div>
     </header>
 
-    <div class="order-layout">
-      <!-- Bên trái: Hình ảnh sản phẩm -->
-      <div class="order-visual">
-        <img src="../img/order-product.svg" alt="Tinh bột nghệ Quảng Nam" class="order-image">
-        
-        <div class="order-benefits">
-          <h3>Ưu đãi đặc biệt</h3>
+    <main class="container page-content">
+      <header class="page-header">
+        <h1>Đặt hàng</h1>
+        <p class="lead">
+          Điền thông tin để nhận sản phẩm tinh bột nghệ Quảng Nam chính gốc
+        </p>
+      </header>
+
+      <div class="order-layout">
+        <!-- Bên trái: Hình ảnh sản phẩm -->
+        <div class="order-visual">
+          <img
+            src="../img/order-product.svg"
+            alt="Tinh bột nghệ Quảng Nam"
+            class="order-image"
+          />
+
+          <div class="order-benefits">
+            <h3>Ưu đãi đặc biệt</h3>
+            <ul>
+              <li>✅ Miễn phí vận chuyển cho đơn từ 500.000đ</li>
+              <li>✅ Tặng mẫu thử 20g cho đơn hàng đầu tiên</li>
+              <li>✅ Tích điểm đổi quà hấp dẫn</li>
+              <li>✅ Bảo hành chất lượng 100%</li>
+            </ul>
+          </div>
+
+          <div class="trust-badges">
+            <div class="badge">
+              <span class="badge-icon">🔒</span>
+              <span>Thanh toán an toàn</span>
+            </div>
+            <div class="badge">
+              <span class="badge-icon">📦</span>
+              <span>Giao hàng nhanh</span>
+            </div>
+            <div class="badge">
+              <span class="badge-icon">✨</span>
+              <span>Chính hãng 100%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bên phải: Form đặt hàng -->
+        <div class="order-form-container">
+          <form id="order-form" class="order-form">
+            <h2>Thông tin đặt hàng</h2>
+
+            <div class="form-section">
+              <h3>Thông tin khách hàng</h3>
+              <div class="form-group">
+                <label for="name"
+                  >Họ và tên <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Nguyễn Văn A"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone"
+                  >Số điện thoại <span class="required">*</span></label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="0123 456 789"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="email@example.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="address"
+                  >Địa chỉ giao hàng <span class="required">*</span></label
+                >
+                <textarea
+                  id="address"
+                  rows="3"
+                  placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Chọn sản phẩm</h3>
+              <div class="form-group">
+                <label for="order-product"
+                  >Sản phẩm <span class="required">*</span></label
+                >
+                <select id="order-product" required>
+                  <option value="">-- Chọn sản phẩm --</option>
+                  <option value="tb100" data-price="120000">
+                    Tinh bột nghệ 100g — ₫120.000
+                  </option>
+                  <option value="tb250" data-price="280000">
+                    Tinh bột nghệ 250g — ₫280.000 (Tiết kiệm 40.000đ)
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="order-qty"
+                  >Số lượng <span class="required">*</span></label
+                >
+                <input
+                  type="number"
+                  id="order-qty"
+                  min="1"
+                  value="1"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="payment-method"
+                  >Hình thức thanh toán <span class="required">*</span></label
+                >
+                <select id="payment-method" required>
+                  <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                  <option value="bank">Chuyển khoản ngân hàng</option>
+                  <option value="momo">Ví MoMo</option>
+                  <option value="zalopay">ZaloPay</option>
+                </select>
+              </div>
+
+              <div class="order-summary-box">
+                <div class="summary-row">
+                  <span>Tạm tính:</span>
+                  <span id="subtotal">₫0</span>
+                </div>
+                <div class="summary-row">
+                  <span>Phí vận chuyển:</span>
+                  <span id="shipping">₫30.000</span>
+                </div>
+                <div class="summary-row total">
+                  <span>Tổng cộng:</span>
+                  <span id="total">₫0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Ghi chú</h3>
+              <div class="form-group">
+                <textarea
+                  id="note"
+                  rows="3"
+                  placeholder="Ghi chú về đơn hàng (tùy chọn)"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-large primary">
+                Đặt hàng ngay
+              </button>
+              <button type="button" id="view-cart" class="btn outline">
+                Xem giỏ hàng
+              </button>
+            </div>
+
+            <p id="order-msg" class="order-msg" aria-live="polite"></p>
+
+            <div class="form-note">
+              <p>
+                <small
+                  >Bằng việc đặt hàng, bạn đồng ý với
+                  <a href="#">Điều khoản sử dụng</a> và
+                  <a href="#">Chính sách bảo mật</a> của chúng tôi.</small
+                >
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Thông tin hỗ trợ -->
+      <section class="support-section">
+        <h2>Cần hỗ trợ?</h2>
+        <div class="support-grid">
+          <div class="support-item">
+            <h3>📞 Hotline</h3>
+            <p><a href="tel:0123456789">0123.456.789</a></p>
+            <p class="support-hours">Hỗ trợ 24/7</p>
+          </div>
+          <div class="support-item">
+            <h3>💬 Chat Zalo</h3>
+            <p>Zalo OA: Nghệ Quảng Nam</p>
+            <p class="support-hours">Phản hồi trong 5 phút</p>
+          </div>
+          <div class="support-item">
+            <h3>✉️ Email</h3>
+            <p>
+              <a href="mailto:order@nghe-quangnam.vn">order@nghe-quangnam.vn</a>
+            </p>
+            <p class="support-hours">Phản hồi trong 2 giờ</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <h4>Công ty Tinh bột nghệ Quảng Nam</h4>
+          <p>Địa chỉ: Quảng Nam, Việt Nam</p>
+          <p>Hotline: <a href="tel:0123456789">0123.456.789</a></p>
+          <p>Email: info@nghe-quangnam.vn</p>
+        </div>
+        <div class="footer-col">
+          <h4>Liên kết</h4>
           <ul>
-            <li>✅ Miễn phí vận chuyển cho đơn từ 500.000đ</li>
-            <li>✅ Tặng mẫu thử 20g cho đơn hàng đầu tiên</li>
-            <li>✅ Tích điểm đổi quà hấp dẫn</li>
-            <li>✅ Bảo hành chất lượng 100%</li>
+            <li><a href="story.html">Câu chuyện</a></li>
+            <li><a href="founder.html">Người sáng lập</a></li>
+            <li><a href="order.html">Đặt hàng</a></li>
           </ul>
         </div>
-
-        <div class="trust-badges">
-          <div class="badge">
-            <span class="badge-icon">🔒</span>
-            <span>Thanh toán an toàn</span>
-          </div>
-          <div class="badge">
-            <span class="badge-icon">📦</span>
-            <span>Giao hàng nhanh</span>
-          </div>
-          <div class="badge">
-            <span class="badge-icon">✨</span>
-            <span>Chính hãng 100%</span>
-          </div>
+        <div class="footer-col">
+          <h4>Kết nối</h4>
+          <p>Facebook | Zalo | Instagram</p>
         </div>
       </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year-2"></span> Nghệ Quảng Nam — Tinh túy đất Quảng
+        </p>
+      </div>
+    </footer>
 
-      <!-- Bên phải: Form đặt hàng -->
-      <div class="order-form-container">
-        <form id="order-form" class="order-form">
-          <h2>Thông tin đặt hàng</h2>
-          
-          <div class="form-section">
-            <h3>Thông tin khách hàng</h3>
-            <div class="form-group">
-              <label for="name">Họ và tên <span class="required">*</span></label>
-              <input type="text" id="name" placeholder="Nguyễn Văn A" required>
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Số điện thoại <span class="required">*</span></label>
-              <input type="tel" id="phone" placeholder="0123 456 789" required>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="email@example.com">
-            </div>
-
-            <div class="form-group">
-              <label for="address">Địa chỉ giao hàng <span class="required">*</span></label>
-              <textarea id="address" rows="3" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố" required></textarea>
-            </div>
-          </div>
-
-          <div class="form-section">
-            <h3>Chọn sản phẩm</h3>
-            <div class="form-group">
-              <label for="order-product">Sản phẩm <span class="required">*</span></label>
-              <select id="order-product" required>
-                <option value="">-- Chọn sản phẩm --</option>
-                <option value="tb100" data-price="120000">Tinh bột nghệ 100g — ₫120.000</option>
-                <option value="tb250" data-price="280000">Tinh bột nghệ 250g — ₫280.000 (Tiết kiệm 40.000đ)</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="order-qty">Số lượng <span class="required">*</span></label>
-              <input type="number" id="order-qty" min="1" value="1" required>
-            </div>
-
-            <div class="form-group">
-              <label for="payment-method">Hình thức thanh toán <span class="required">*</span></label>
-              <select id="payment-method" required>
-                <option value="cod">Thanh toán khi nhận hàng (COD)</option>
-                <option value="bank">Chuyển khoản ngân hàng</option>
-                <option value="momo">Ví MoMo</option>
-                <option value="zalopay">ZaloPay</option>
-              </select>
-            </div>
-
-            <div class="order-summary-box">
-              <div class="summary-row">
-                <span>Tạm tính:</span>
-                <span id="subtotal">₫0</span>
-              </div>
-              <div class="summary-row">
-                <span>Phí vận chuyển:</span>
-                <span id="shipping">₫30.000</span>
-              </div>
-              <div class="summary-row total">
-                <span>Tổng cộng:</span>
-                <span id="total">₫0</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-section">
-            <h3>Ghi chú</h3>
-            <div class="form-group">
-              <textarea id="note" rows="3" placeholder="Ghi chú về đơn hàng (tùy chọn)"></textarea>
-            </div>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-large primary">Đặt hàng ngay</button>
-            <button type="button" id="view-cart" class="btn outline">Xem giỏ hàng</button>
-          </div>
-
-          <p id="order-msg" class="order-msg" aria-live="polite"></p>
-
-          <div class="form-note">
-            <p><small>Bằng việc đặt hàng, bạn đồng ý với <a href="#">Điều khoản sử dụng</a> và <a href="#">Chính sách bảo mật</a> của chúng tôi.</small></p>
-          </div>
-        </form>
+    <!-- Cart modal -->
+    <div id="cart-modal" class="cart-modal" aria-hidden="true">
+      <div class="cart-panel">
+        <button id="close-cart" class="close-cart" aria-label="Đóng giỏ hàng">
+          ×
+        </button>
+        <h3>Giỏ hàng của bạn</h3>
+        <div id="cart-items"></div>
+        <div class="cart-summary">Tổng: <span id="cart-total">₫0</span></div>
+        <div class="cart-actions">
+          <button id="checkout" class="btn primary">Thanh toán</button>
+          <button id="empty-cart" class="btn">Xóa hết</button>
+        </div>
       </div>
     </div>
 
-    <!-- Thông tin hỗ trợ -->
-    <section class="support-section">
-      <h2>Cần hỗ trợ?</h2>
-      <div class="support-grid">
-        <div class="support-item">
-          <h3>📞 Hotline</h3>
-          <p><a href="tel:0123456789">0123.456.789</a></p>
-          <p class="support-hours">Hỗ trợ 24/7</p>
-        </div>
-        <div class="support-item">
-          <h3>💬 Chat Zalo</h3>
-          <p>Zalo OA: Nghệ Quảng Nam</p>
-          <p class="support-hours">Phản hồi trong 5 phút</p>
-        </div>
-        <div class="support-item">
-          <h3>✉️ Email</h3>
-          <p><a href="mailto:order@nghe-quangnam.vn">order@nghe-quangnam.vn</a></p>
-          <p class="support-hours">Phản hồi trong 2 giờ</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-col">
-        <h4>Công ty Tinh bột nghệ Quảng Nam</h4>
-        <p>Địa chỉ: Quảng Nam, Việt Nam</p>
-        <p>Hotline: <a href="tel:0123456789">0123.456.789</a></p>
-        <p>Email: info@nghe-quangnam.vn</p>
-      </div>
-      <div class="footer-col">
-        <h4>Liên kết</h4>
-        <ul>
-          <li><a href="story.html">Câu chuyện</a></li>
-          <li><a href="founder.html">Người sáng lập</a></li>
-          <li><a href="order.html">Đặt hàng</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Kết nối</h4>
-        <p>Facebook | Zalo | Instagram</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year-2"></span> Nghệ Quảng Nam — Tinh túy đất Quảng</p>
-    </div>
-  </footer>
-
-  <!-- Cart modal -->
-  <div id="cart-modal" class="cart-modal" aria-hidden="true">
-    <div class="cart-panel">
-      <button id="close-cart" class="close-cart" aria-label="Đóng giỏ hàng">×</button>
-      <h3>Giỏ hàng của bạn</h3>
-      <div id="cart-items"></div>
-      <div class="cart-summary">Tổng: <span id="cart-total">₫0</span></div>
-      <div class="cart-actions">
-        <button id="checkout" class="btn primary">Thanh toán</button>
-        <button id="empty-cart" class="btn">Xóa hết</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="js/main.js"></script>
-</body>
+    <script src="../.js/main.js"></script>
+  </body>
 </html>
