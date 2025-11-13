@@ -10,7 +10,7 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="index.html">
-          <img src="../img/logo.svg" alt="Logo" />
+          <img src="../img/LOGO.png" alt="Logo" />
           <span>Nghệ Quảng Nam</span>
         </a>
         <nav class="main-nav">
@@ -20,9 +20,9 @@
           <a href="index.html#products">Sản phẩm</a>
           <a href="order.html">Đặt hàng</a>
         </nav>
-        <button id="cart-btn-2" class="cart-btn">
+         <button id="cart-btn" class="cart-btn" aria-label="Mở giỏ hàng">
           <span class="cart-icon">🛒</span>
-          <span id="cart-count-2">0</span>
+          <span id="cart-count">0</span>
         </button>
       </div>
     </header>
@@ -167,7 +167,7 @@
         <div class="footer-col">
           <h4>Công ty Tinh bột nghệ Quảng Nam</h4>
           <p>Địa chỉ: Quảng Nam, Việt Nam</p>
-          <p>Hotline: <a href="tel:0123456789">0123.456.789</a></p>
+          <p>Hotline: <a href="tel:0774455916">0774455916</a></p>
           <p>Email: info@nghe-quangnam.vn</p>
         </div>
         <div class="footer-col">
@@ -189,6 +189,21 @@
         </p>
       </div>
     </footer>
+    <!-- Cart modal -->
+    <div id="cart-modal" class="cart-modal" aria-hidden="true">
+      <div class="cart-panel">
+        <button id="close-cart" class="close-cart" aria-label="Đóng giỏ hàng">
+          ×
+        </button>
+        <h3>Giỏ hàng của bạn</h3>
+        <div id="cart-items"></div>
+        <div class="cart-summary">Tổng: <span id="cart-total">₫0</span></div>
+        <div class="cart-actions">
+          <button id="checkout" class="btn primary">Thanh toán</button>
+          <button id="empty-cart" class="btn">Xóa hết</button>
+        </div>
+      </div>
+    </div>
 
     <script src="../.js/main.js"></script>
   </body>

@@ -209,20 +209,58 @@
   // Order page: calculate totals dynamically
   const orderProduct = q("#order-product");
   const orderQty = q("#order-qty");
+  const qtyDecrease = q("#qty-decrease");
+  const qtyIncrease = q("#qty-increase");
+  
   if (orderProduct && orderQty) {
+    // Quantity buttons
+    if (qtyDecrease) {
+      qtyDecrease.addEventListener("click", () => {
+        let currentQty = Number(orderQty.value || 100);
+        if (currentQty > 100) {
+          orderQty.value = currentQty - 100;
+          calculateOrder();
+        }
+      });
+    }
+    
+    if (qtyIncrease) {
+      qtyIncrease.addEventListener("click", () => {
+        let currentQty = Number(orderQty.value || 100);
+        orderQty.value = currentQty + 100;
+        calculateOrder();
+      });
+    }
+    
     function calculateOrder() {
       const selectedOption = orderProduct.selectedOptions[0];
-      if (!selectedOption || !selectedOption.dataset.price) return;
-      const price = Number(selectedOption.dataset.price);
-      const qty = Number(orderQty.value || 1);
-      const subtotal = price * qty;
-      const shipping = subtotal >= 500000 ? 0 : 30000;
-      const total = subtotal + shipping;
+      if (!selectedOption || !selectedOption.dataset.discount) {
+        if (q("#subtotal")) q("#subtotal").textContent = "₫0";
+        if (q("#discount")) q("#discount").textContent = "₫0";
+        if (q("#shipping")) q("#shipping").textContent = "₫30.000";
+        if (q("#total")) q("#total").textContent = "₫0";
+        return;
+      }
+      
+      const pricePerGram = 800; // 80,000 / 100 gram = 800đ/gram
+      const grams = Number(orderQty.value || 100);
+      const discountRate = Number(selectedOption.dataset.discount);
+      const bonusGrams = Number(selectedOption.dataset.bonus || 0); // Fixed bonus amount in grams
+      
+      const subtotal = pricePerGram * grams;
+      const discountAmount = subtotal * (1 - discountRate);
+      const afterDiscount = subtotal - discountAmount;
+      const shipping = afterDiscount >= 500000 ? 0 : 30000;
+      const total = afterDiscount + shipping;
+      
+      // Calculate actual grams received (includes fixed bonus)
+      const actualGrams = grams + bonusGrams;
 
-      if (q("#subtotal")) q("#subtotal").textContent = formatVND(subtotal);
+      if (q("#subtotal")) q("#subtotal").textContent = formatVND(subtotal) + (bonusGrams > 0 ? ` (Nhận ${actualGrams}g)` : '');
+      if (q("#discount")) q("#discount").textContent = discountAmount > 0 ? "-" + formatVND(discountAmount) : "₫0";
       if (q("#shipping"))
         q("#shipping").textContent =
-          shipping === 0 ? "Miễn phí" : formatVND(shipping);
+          shipping === 0 ? "Miễn phí ✓" : formatVND(shipping);
       if (q("#total")) q("#total").textContent = formatVND(total);
     }
 
@@ -244,12 +282,11 @@
       const phone = q("#phone").value.trim();
       const address = q("#address").value.trim();
       const prod = q("#order-product");
-      const pid = prod.value;
-      const pprice = Number(prod.selectedOptions[0]?.dataset.price || 0);
-      const pname = prod.selectedOptions[0]?.text.split(" — ")[0].trim();
-      const qty = Number(q("#order-qty").value || 1);
+      const packageType = prod.value;
+      const discountRate = Number(prod.selectedOptions[0]?.dataset.discount || 1);
+      const grams = Number(q("#order-qty").value || 100);
 
-      if (!name || !phone || !address || !pid) {
+      if (!name || !phone || !address || !packageType) {
         if (q("#order-msg")) {
           q("#order-msg").textContent = "Vui lòng điền đủ thông tin bắt buộc.";
           q("#order-msg").style.background = "#ffebee";
@@ -267,15 +304,25 @@
 
       // Simulate async processing
       setTimeout(() => {
-        // Add to cart and show success
-        addToCart(pid, pname, pprice, qty);
-        const cart = loadCart();
-        const total = cart.reduce((s, i) => s + i.qty * i.price, 0);
+        // Calculate final price
+        const pricePerGram = 800;
+        const subtotal = pricePerGram * grams;
+        const afterDiscount = subtotal * discountRate;
+        const shipping = afterDiscount >= 500000 ? 0 : 30000;
+        const total = afterDiscount + shipping;
+        
+        const bonusGrams = Number(prod.selectedOptions[0]?.dataset.bonus || 0);
+        const actualGrams = grams + bonusGrams;
+        
+        const productName = `Tinh bột nghệ ${actualGrams}g${bonusGrams > 0 ? ' (Tặng thêm ' + bonusGrams + 'g)' : ''} - ${packageType === 'deal' ? 'Ưu đãi' : 'Bình thường'}`;
+        
+        // Add to cart
+        addToCart(packageType + '_' + grams, productName, total, 1);
 
         if (q("#order-msg")) {
           q(
             "#order-msg"
-          ).textContent = `✅ Đơn hàng đã được ghi nhận! Tổng: ${formatVND(
+          ).textContent = `✅ Đơn hàng đã được ghi nhận! ${bonusGrams > 0 ? `Bạn sẽ nhận ${actualGrams}g (Mua ${grams}g tặng thêm ${bonusGrams}g). ` : ''}Tổng: ${formatVND(
             total
           )}. Chúng tôi sẽ liên hệ bạn sớm nhất.`;
           q("#order-msg").style.background = "#e8f5e9";
@@ -293,8 +340,8 @@
         setTimeout(() => {
           orderForm.reset();
           if (q("#order-msg")) q("#order-msg").textContent = "";
-          // Optionally clear cart after order
-          // localStorage.removeItem(KEY); updateCartUI();
+          if (q("#order-qty")) q("#order-qty").value = "100";
+          calculateOrder();
         }, 8000);
       }, 500); // End of async simulation
     });

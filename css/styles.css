@@ -86,7 +86,7 @@ ul {
   color: var(--white);
 }
 .logo img {
-  height: 48px;
+  height: 64px;
 }
 
 .menu-toggle {
@@ -141,7 +141,7 @@ ul {
 }
 
 .cart-btn {
-  background: var(--brown);
+  background: var(--turmeric);
   border: none;
   padding: 0.6rem 1rem;
   border-radius: 8px;

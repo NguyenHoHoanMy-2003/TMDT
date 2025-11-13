@@ -10,7 +10,7 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="index.html">
-          <img src="../img/logo.svg" alt="Logo" />
+          <img src="../img/LOGO.png" alt="Logo" />
           <span>Nghệ Quảng Nam</span>
         </a>
         <nav class="main-nav">
@@ -20,12 +20,12 @@
           <a href="index.html#products">Sản phẩm</a>
           <a href="order.html" class="active">Đặt hàng</a>
         </nav>
-        <button id="cart-btn-2" class="cart-btn">
+         <button id="cart-btn" class="cart-btn" aria-label="Mở giỏ hàng">
           <span class="cart-icon">🛒</span>
-          <span id="cart-count-2">0</span>
+          <span id="cart-count">0</span>
         </button>
       </div>
-    </header>
+    </header> 
 
     <main class="container page-content">
       <header class="page-header">
@@ -48,9 +48,11 @@
             <h3>Ưu đãi đặc biệt</h3>
             <ul>
               <li>✅ Miễn phí vận chuyển cho đơn từ 500.000đ</li>
-              <li>✅ Tặng mẫu thử 20g cho đơn hàng đầu tiên</li>
+              <li>✅ <strong>Mua 1 Tặng 1</strong> khi chọn gói Ưu đãi (áp dụng cho 100g đầu tiên)</li>
+              <li>✅ Tặng hộp đựng sang trọng, độc đáo</li>
               <li>✅ Tích điểm đổi quà hấp dẫn</li>
               <li>✅ Bảo hành chất lượng 100%</li>
+              <li><strong>💡 Nếu bạn không chọn gói "Ưu đãi", đơn hàng sẽ được tính theo giá bình thường, không áp dụng ưu đãi trên.</strong></li>
             </ul>
           </div>
 
@@ -125,32 +127,43 @@
 
             <div class="form-section">
               <h3>Chọn sản phẩm</h3>
+              <p style="margin-bottom: 1rem; color: var(--muted); font-size: 0.95rem;">
+                📦 Giá: <strong>₫80.000</strong> / 100 gram
+              </p>
               <div class="form-group">
                 <label for="order-product"
-                  >Sản phẩm <span class="required">*</span></label
+                  >Gói sản phẩm <span class="required">*</span></label
                 >
                 <select id="order-product" required>
-                  <option value="">-- Chọn sản phẩm --</option>
-                  <option value="tb100" data-price="120000">
-                    Tinh bột nghệ 100g — ₫120.000
+                  <option value="">-- Chọn gói --</option>
+                  <option value="deal" data-discount="1" data-bonus="100">
+                    Ưu đãi (Tặng thêm 100g - Tặng hộp đựng sang trọng)
                   </option>
-                  <option value="tb250" data-price="280000">
-                    Tinh bột nghệ 250g — ₫280.000 (Tiết kiệm 40.000đ)
+                  <option value="normal" data-discount="1" data-bonus="0">
+                    Bình thường
                   </option>
                 </select>
               </div>
 
               <div class="form-group">
                 <label for="order-qty"
-                  >Số lượng <span class="required">*</span></label
+                  >Số lượng (gram) <span class="required">*</span></label
                 >
-                <input
-                  type="number"
-                  id="order-qty"
-                  min="1"
-                  value="1"
-                  required
-                />
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <button type="button" id="qty-decrease" class="btn" style="padding: 0.5rem 1rem;">−</button>
+                  <input
+                    type="number"
+                    id="order-qty"
+                    min="100"
+                    step="100"
+                    value="100"
+                    readonly
+                    required
+                    style="text-align: center; font-weight: 600; font-size: 1.1rem;"
+                  />
+                  <button type="button" id="qty-increase" class="btn" style="padding: 0.5rem 1rem;">+</button>
+                </div>
+                <small style="color: var(--muted); display: block; margin-top: 0.5rem;">Mỗi lần tăng/giảm 100 gram</small>
               </div>
 
               <div class="form-group">
@@ -169,6 +182,10 @@
                 <div class="summary-row">
                   <span>Tạm tính:</span>
                   <span id="subtotal">₫0</span>
+                </div>
+                <div class="summary-row">
+                  <span>Giảm giá:</span>
+                  <span id="discount">₫0</span>
                 </div>
                 <div class="summary-row">
                   <span>Phí vận chuyển:</span>
@@ -222,7 +239,7 @@
         <div class="support-grid">
           <div class="support-item">
             <h3>📞 Hotline</h3>
-            <p><a href="tel:0123456789">0123.456.789</a></p>
+            <p><a href="tel:0774455916">0774455916</a></p>
             <p class="support-hours">Hỗ trợ 24/7</p>
           </div>
           <div class="support-item">
@@ -246,7 +263,7 @@
         <div class="footer-col">
           <h4>Công ty Tinh bột nghệ Quảng Nam</h4>
           <p>Địa chỉ: Quảng Nam, Việt Nam</p>
-          <p>Hotline: <a href="tel:0123456789">0123.456.789</a></p>
+          <p>Hotline: <a href="tel:0774455916">0774455916</a></p>
           <p>Email: info@nghe-quangnam.vn</p>
         </div>
         <div class="footer-col">
