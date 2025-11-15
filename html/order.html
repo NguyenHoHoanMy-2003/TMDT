@@ -128,42 +128,48 @@
             <div class="form-section">
               <h3>Chọn sản phẩm</h3>
               <p style="margin-bottom: 1rem; color: var(--muted); font-size: 0.95rem;">
-                📦 Giá: <strong>₫80.000</strong> / 100 gram
+                📦 <strong>Chiến lược giá bán:</strong> Giá niêm yết 199.000đ / gói 150g (áp dụng đóng nhất trên tất cả kênh online)
               </p>
               <div class="form-group">
                 <label for="order-product"
-                  >Gói sản phẩm <span class="required">*</span></label
+                  >Chọn khối lượng <span class="required">*</span></label
                 >
                 <select id="order-product" required>
                   <option value="">-- Chọn gói --</option>
-                  <option value="deal" data-discount="1" data-bonus="100">
-                    Ưu đãi (Tặng thêm 100g - Tặng hộp đựng sang trọng)
+                  <option value="150g" data-price="199000" data-gram="150" data-note="Giá lẻ">
+                    150g - ₫199.000 (Giá lẻ)
                   </option>
-                  <option value="normal" data-discount="1" data-bonus="0">
-                    Bình thường
+                  <option value="300g" data-price="360000" data-gram="300" data-note="Combo tiết kiệm">
+                    300g - ₫360.000 (Combo tiết kiệm)
+                  </option>
+                  <option value="500g" data-price="550000" data-gram="500" data-note="Mua nhiều giảm mạnh">
+                    500g - ₫550.000
+                  </option>
+                  <option value="1000g" data-price="990000" data-gram="1000" data-note="Giá sỉ Spa/Đại lý">
+                    1000g (1kg) - ₫990.000
                   </option>
                 </select>
               </div>
 
               <div class="form-group">
                 <label for="order-qty"
-                  >Số lượng (gram) <span class="required">*</span></label
+                  >Số lượng gói <span class="required">*</span></label
                 >
                 <div style="display: flex; align-items: center; gap: 1rem;">
                   <button type="button" id="qty-decrease" class="btn" style="padding: 0.5rem 1rem;">−</button>
                   <input
                     type="number"
                     id="order-qty"
-                    min="100"
-                    step="100"
-                    value="100"
+                    min="1"
+                    step="1"
+                    value="1"
                     readonly
                     required
                     style="text-align: center; font-weight: 600; font-size: 1.1rem;"
                   />
                   <button type="button" id="qty-increase" class="btn" style="padding: 0.5rem 1rem;">+</button>
                 </div>
-                <small style="color: var(--muted); display: block; margin-top: 0.5rem;">Mỗi lần tăng/giảm 100 gram</small>
+                <small style="color: var(--muted); display: block; margin-top: 0.5rem;">Mỗi lần tăng/giảm 1 gói</small>
               </div>
 
               <div class="form-group">
